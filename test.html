@@ -3,8 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body>
-<h1>跳转测试用文本</h1>
+<div id="d1">点击试试</div>
+<div id="d2"></div>
+<script>
+    $(function () {
+        $('#d1').click(function () {
+            $.ajax({
+                url:'data.json',
+                success:function(res){
+                    console.log(res)
+                }
+            })
+        })
+    })
+</script>
 </body>
 </html>
